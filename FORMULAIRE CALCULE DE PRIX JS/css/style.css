@@ -1,0 +1,65 @@
+html {
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+form {
+    width: 100%;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+}
+
+.btn {
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total {
+    background: rgb(106, 106, 253);
+    color: #FFF;
+}
+
+.total:hover {
+    background: rgb(59, 59, 233);
+    transition: 0.2s;
+}
+
+.valider {
+    background: #98FB98;
+}
+
+.valider:hover {
+    background: #5ad85a;
+    transition: 0.2s;
+}
+
+.effacer {
+    background: red;
+    color: #FFF;
+}
+
+.effacer:hover {
+    background: rgb(163, 3, 3);
+    transition: 0.2s;
+}
+

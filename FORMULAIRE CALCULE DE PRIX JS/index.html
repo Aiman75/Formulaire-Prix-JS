@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulaire de prix</title>
+</head>
+<body>
+    <h1>Exemple de formulaire avec validation et calcul automatique de champs</h1> 
+    <h2>(à l'aide de JavaScript)</h2> 
+    <main>
+
+        <form NAME="form1">
+            <center>
+            
+            <table BORDER="1" CELLSPACING="0" BGCOLOR="#FAEBD7">
+                <tr BGCOLOR="#FFDEAD">
+                    <th WIDTH=20%>Quantités</th>
+                    <td WIDTH=40%><B>Articles</B></td>
+                    <th WIDTH=15%>Prix unitaire</th>
+                    <th WIDTH=35%>Prix</th>
+                </tr>
+                <tr>
+                    <th>
+                        <input class="quantite" TYPE="text" NAME="q1" SIZE=5 MAXLENGTH=5 style="text-align: center; " onBlur="test_champ(this)">
+                    </th>
+                    <td>Bureau</td>
+                    <th>
+                        <input TYPE="text" NAME="pu1" VALUE="450" SIZE=5 style="text-align: right; " READONLY onChange="champ_verrouille(this)"><span> €</span>
+                    </th>
+                    <th>
+                        <input TYPE="text" NAME="p1" SIZE=8 style="text-align: right; "><span> €</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input TYPE="text" NAME="q2" SIZE=5 MAXLENGTH=5 style="text-align: center; " onBlur="test_champ(this)">
+                    </th>
+                    <td>Chaises</td>
+                    <th>
+                        <input TYPE="text" NAME="pu2" VALUE="80" SIZE=5 style="text-align: right; " READONLY onChange="champ_verrouille(this,80)"><span> €</span>
+                    </th>
+                    <th>
+                        <input TYPE="text" NAME="p2" SIZE=8 style="text-align: right; "><span> €</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <input TYPE="text" NAME="q3" SIZE=5 MAXLENGTH=5 style="text-align: center; " onBlur="test_champ(this)">
+                    </th>
+                    <td>Roulettes de chaises (paquet de 4)</td>
+                    <th>
+                        <input TYPE="text" NAME="pu3" VALUE="16.50" SIZE=5 style="text-align: right; " READONLY onChange="champ_verrouille(this,16.50)"><span> €</span>
+                    </th>
+                    <th>
+                        <input TYPE="text" NAME="p3" SIZE=8 style="text-align: right; "><span> €</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td COLSPAN=3 ALIGN=right BGCOLOR="#FFDEAD"><B>Total TTC</B></td>&nbsp;&nbsp;&nbsp;
+                    <th>
+                        <input TYPE="text" NAME="total" SIZE=8 style="text-align: right; " ><span> €</span>
+                    </th>
+                </tr>
+            </table>
+            
+            <p>
+                <input class="btn total" type="button" value=" Total " onclick="calcul_form()">
+                <input class="btn valider" type="button" value=" Soumettre la commande " onclick="soumettre_form()">
+                    <!-- j'utilise l'attribut type=button (plutôt que type=submit) de façon que
+                        le formulaire ne soit PAS réinitialisé en cas d'erreur -->
+                <input class="btn effacer" type="RESET" VALUE="Effacer" > 
+            </p>
+            </center>
+        </form>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
